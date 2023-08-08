@@ -192,10 +192,10 @@ train_loader = DataLoader(train_data, shuffle=True, batch_size=config['batch_siz
 test_loader = DataLoader(test_data, shuffle=True, batch_size=config['batch_size'])
 vocab_size = TOP_WORDS + 1 #extra 1 for padding
 
-# model_config = {"num_layers": 2, "embedding_size": 64, "output_size": 2, "hidden_size": 256, "vocab_size": vocab_size}
+model_config = {"num_layers": 2, "embedding_size": 64, "output_size": 2, "hidden_size": 256, "vocab_size": vocab_size}
 
-# model = SentimentRNN(model_config['num_layers'],
-#                      model_config['vocab_size'],
-#                      model_config['hidden_size'],
-#                      model_config['output_size'], 
-#                      model_config['embedding_size']).to(config['device'])
+model = SentimentRNN(model_config['num_layers'],
+                     model_config['vocab_size'],
+                     model_config['hidden_size'],
+                     model_config['output_size'], 
+                     model_config['embedding_size']).to(config['device'])
